@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Container = styled.div``
 
@@ -15,7 +16,8 @@ const Left = styled.div`
 
 const Logo = styled.h1``
 
-const MenuItem = styled.div``
+const MenuItem = styled.div`
+  text-decoration : none;`
 
 const ToSell = styled.button``
 
@@ -48,8 +50,8 @@ const Navbar = () => {
       <Wrapper>
 
         <Left>
-          <Logo>VDM</Logo>
-          <MenuItem>Catalogue</MenuItem>
+          <Link to="/" style={{ textDecoration: "none", color: "#111111" }} ><Logo>VDM</Logo></Link>
+          <Link to="/catalog" style={{ textDecoration: "none", color: "#111111"  }} ><MenuItem >Catalogue</MenuItem></Link>
           <MenuItem>À Propos</MenuItem>
           <ToSell>Vendre</ToSell>
         </Left>
@@ -62,7 +64,7 @@ const Navbar = () => {
 
         <Right>
           <Cart>Panier</Cart>
-          <Account>Se Connecter</Account>
+          <Account>Mon Compte</Account>
         </Right>
 
 

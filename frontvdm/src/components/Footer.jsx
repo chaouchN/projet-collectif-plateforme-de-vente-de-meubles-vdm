@@ -6,9 +6,10 @@ const Container = styled.div`
   color: #f5f5f5;
   padding: 20px;
   text-align: center;
-  position: absolute;
-  width: 100vw;
+  position: relative;
+  width: 100%;
   margin: 0;
+  box-sizing: border-box;
 `;
 
 const Footer = () => {

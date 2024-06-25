@@ -4,8 +4,8 @@ const Product = ({ product }) => {
       <img src={product.image} alt={product.name} style={{ width: '300px' }} />
       <h2>{product.name}</h2>
       <p>{product.description}</p>
-      <p>Prix: ${product.price}</p>
-      <h1>{product.nadia}</h1>
+      <p>Prix: {product.price}€</p>
+      <button>ACHETEEEEEEEZ</button>
     </div>
   );
 };

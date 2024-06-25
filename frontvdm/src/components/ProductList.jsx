@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import products from './products';
 import Product from './Product';
+import { Container } from 'react-bootstrap';
 
+const Title = styled.h1`
+  font-size: 64px;
+  text-align: center;
+`
 
 const List = styled.div`
   display: grid;
@@ -11,14 +16,14 @@ const List = styled.div`
 
 const ProductList = () => {
   return (
-    <div>
-      <h1>La came</h1>
+    <Container>
+      <Title>Les Meubles</Title>
       <List>
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </List>
-    </div>
+    </Container>
   );
 };
 
