@@ -7,3 +7,8 @@ installer symfony7 :
 composer create-project symfony/skeleton:"7.0.*" backvdm
 composer require symfony/maker-bundle --dev
 composer require symfony/orm-pack
+
+
+Pour accéder à la documentation technique veuillez suivre le lien ci-dessous : 
+
+https://docs.google.com/document/d/1mkqgD3SnDnVLWMiZdCcBY604BZIZsRRTp8i2XXjG62A/edit
