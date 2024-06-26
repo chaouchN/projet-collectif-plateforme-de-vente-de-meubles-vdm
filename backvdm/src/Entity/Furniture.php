@@ -47,6 +47,10 @@ class Furniture
     #[ORM\Column]
     private ?\DateTimeImmutable $updatedAt = null;
 
+    #[ORM\ManyToOne(inversedBy: 'furniture')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Categories $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -180,6 +184,18 @@ class Furniture
     public function setUpdatedAt(\DateTimeImmutable $updatedAt): static
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Categories
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Categories $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
