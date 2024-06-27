@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Container = styled.div`
     display: flex;
@@ -71,7 +72,7 @@ const Hero = () => {
                 Explorez notre plateforme dédiée à la revente de meubles entre particuliers où chaque pièce trouve une seconde vie.<br />
                 Réduisons ensemble notre empreinte écologique.
             </Slogan>
-            <Button><span>Découvrez nos produits</span></Button>
+            <Link to="/catalog"><Button><span>Découvrez nos produits</span></Button></Link>
             <Image src="https://medias.gazette-drouot.com/prod/medias/mediatheque/100112.jpg" />
         </Container>
     );

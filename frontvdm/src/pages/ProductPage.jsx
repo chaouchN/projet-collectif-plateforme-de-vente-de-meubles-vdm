@@ -1,15 +1,44 @@
-import { useParams } from "react-router-dom"
+import { Container } from 'react-bootstrap'
+import { useParams, useLocation } from 'react-router-dom'
+import styled from 'styled-components'
 
-let ProductPage = () => {
-    const { id } = useParams();
+const Product = styled.div`
+    display: flex;
+    row-gap: 100px`
 
-    return (
-        <>
-        <h1>Product Page</h1>
-        <p>Product ID: {id}</p>
-        </>
+const Informations = styled.div``
 
-    )
-}
+const Image = styled.img`
+    height: 50vh`
 
-export default ProductPage
+const Title = styled.h2``
+
+const Description = styled.p``
+
+const Price = styled.p``
+
+
+const ProductPage = () => {
+  const { id } = useParams();
+  const location = useLocation();
+  const product = location.state;
+
+  return (
+    <>
+      {product ? (
+        <Product>
+          <Image src={product.image} alt={product.name} />
+          <Informations>
+          <Title>{product.name}</Title>
+          <Description>{product.description}</Description>
+          <Price>Prix: {product.price}€</Price>
+          </Informations>
+        </Product>
+      ) : (
+        <p>Produit indisponible</p>
+      )}
+    </>
+  );
+};
+
+export default ProductPage;

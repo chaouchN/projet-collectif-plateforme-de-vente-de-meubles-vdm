@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Container = styled.div`
   border: 1px solid #111111;
@@ -63,7 +63,7 @@ const Product = ({ product }) => {
       <Name>{product.name}</Name>
       <Description>{product.description}</Description>
       <Price>Prix: {product.price}€</Price>
-      <Link to={`/product/${product.id}`}><Button><span>Découvrir</span></Button></Link>
+      <Link to={`/product/${product.id}`} state={product}><Button><span>Découvrir</span></Button></Link>
     </Container>
   );
 };
