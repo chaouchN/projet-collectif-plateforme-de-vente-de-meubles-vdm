@@ -16,6 +16,14 @@ class FurnitureRepository extends ServiceEntityRepository
         parent::__construct($registry, Furniture::class);
     }
 
+    public function findByAllwithRelations(): array
+    {
+        return $this->createQueryBuilder('e')
+            ->select('e', 'c')
+            ->leftJoin('e.category', 'c')
+            ->getQuery()
+            ->getResult();
+    }
     //    /**
     //     * @return Furniture[] Returns an array of Furniture objects
     //     */

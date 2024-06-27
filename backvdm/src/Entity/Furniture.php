@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\FurnitureRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: FurnitureRepository::class)]
 class Furniture
@@ -12,46 +13,65 @@ class Furniture
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['api_furniture_get'])]
     private ?int $id = null;
 
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[Groups(['api_one_furniture'])]
     #[ORM\Column]
     private ?float $height = null;
 
+    
+    #[Groups(['api_one_furniture'])]
     #[ORM\Column]
     private ?float $width = null;
 
+   
+    #[Groups(['api_one_furniture'])]
     #[ORM\Column]
     private ?float $depth = null;
 
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column]
     private ?float $price = null;
 
+    
+    #[Groups(['api_one_furniture'])]
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $color = null;
 
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column(length: 255)]
     private ?string $picture = null;
 
+    
+    #[Groups(['api_one_furniture'])]
     #[ORM\Column(length: 255)]
     private ?string $material = null;
 
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
+    
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    
     #[ORM\Column]
     private ?\DateTimeImmutable $updatedAt = null;
 
-    #[ORM\ManyToOne(inversedBy: 'furniture')]
+    
+    #[Groups(['api_one_furniture'])]
+    #[ORM\ManyToOne(inversedBy: 'furniture', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Categories $category = null;
 
-    #[ORM\ManyToOne(inversedBy: 'furniture')]
+   
+    #[ORM\ManyToOne(inversedBy: 'furniture', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Status $status = null;
 
