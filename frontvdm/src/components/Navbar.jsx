@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CartIcon from "../assets/cart.svg";
 import AccountIcon from "../assets/account.svg";
 import SearchIcon from "../assets/search.svg";
-import LoginPopup from './LoginPopup'; // Assurez-vous que le chemin est correct
 
 const Container = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,7 +83,6 @@ const Image = styled.img`
 `;
 
 const Navbar = () => {
-  const [showLogin, setShowLogin] = useState(false);
 
   return (
     <Container>
@@ -105,13 +102,11 @@ const Navbar = () => {
 
         <Right>
           <Image src={CartIcon}/>
-          <Cart>Panier</Cart>
-          <Image onClick={() => setShowLogin(true)} src={AccountIcon}/>
-          <Account onClick={() => setShowLogin(true)}>Mon Compte</Account>
+          <Link to="/cart" style={{ textDecoration: "none", color: "#111111" }}><Cart>Panier</Cart></Link>
+          <Image src={AccountIcon}/>
+          <Link to="/login" style={{ textDecoration: "none", color: "#111111" }}><Account onClick={() => setShowLogin(true)}>Mon Compte</Account></Link>
         </Right>
       </Wrapper>
-      
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
     </Container>
   );
 };
