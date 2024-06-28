@@ -1,8 +1,26 @@
-# React + Vite
+# VDM : frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+1. Se positionner sur la branche `frontend` : 
+```sh
+git checkout -t origin/frontend
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Se positionner dans le dossier front vdm avec le terminal
+```sh
+cd frontvdm
+```
+3. installer les dépendances
+
+```sh
+npm install
+```
+4. Lancer le serveur le serveur de développement
+```sh
+npm run dev
+```
+
+Le serveur est accessible à l'adresse http://localhost:5173/ 
+
+Félicitations, vous êtes sur VDM 🫠 ! 
