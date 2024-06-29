@@ -23,4 +23,4 @@ npm run dev
 
 Le serveur est accessible à l'adresse http://localhost:5173/ 
 
-Félicitations, vous êtes sur VDM 🫠 ! 
+Félicitations, vous êtes sur VDM 🫠 ! !
