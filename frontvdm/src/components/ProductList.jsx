@@ -27,7 +27,13 @@ const List = styled.div`
   }
 `;
 
-const ProductList = () => {
+const ProductList = /* async */() => {
+
+
+/* const test = await fetch('127.0.0.1:8000/furniture')
+
+console.log(test.json) */
+  
   return (
     <>
       <Title>Tous Les Produits</Title>
