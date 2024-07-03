@@ -5,17 +5,27 @@ const Container = styled.div`
   border: 1px solid #111111;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 0px 10px
   `
 
 const Image = styled.img`
   width: 300px;
+  margin: 20px 10px;
+  border: 2px solid;
   `
 
-const Name = styled.h2``
+const Name = styled.h2`
+margin: 10px 10px;
+text-align: center;
+height: 50px;`
 
-const Description = styled.p``
+const Description = styled.p`
+margin: 20px 10px;
+height: 80px;`
 
-const Price = styled.p``
+const Price = styled.p`
+margin: 30px 10px;`
 
 const Button = styled.button`
   
@@ -30,7 +40,8 @@ const Button = styled.button`
     position: relative;
     overflow: hidden;
     transition: color 0.4s;
-    cursor: pointer;    
+    cursor: pointer;
+    margin: 10px 10px;    
     
     &::before {
         content: '';

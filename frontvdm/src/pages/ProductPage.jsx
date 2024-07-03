@@ -8,7 +8,9 @@ const Product = styled.div`
 const Informations = styled.div``
 
 const Image = styled.img`
-    height: 30vh`
+    height: 30vh;
+    border: 2px solid;
+    margin: 10px 10px;`
 
 const Title = styled.h2``
 
