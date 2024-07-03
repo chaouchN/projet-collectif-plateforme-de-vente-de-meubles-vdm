@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-import products from './products';
+//import products from './products';
 import Product from './Product';
+import React, { useState, useEffect } from "react";
+
+
 
 const Title = styled.h1`
   font-size: 50px;
@@ -27,23 +30,43 @@ const List = styled.div`
   }
 `;
 
-const ProductList = /* async */() => {
+const ProductList = () => {
 
 
-/* const test = await fetch('127.0.0.1:8000/furniture')
+  const [allProducts, setAllProducts] = useState([]);
+  // useEffect(() => {
+    
 
-console.log(test.json) */
-  
+  //   fetch('http://localhost:8000/furniture')
+  //     .then(response => response.json())
+  //     .then((products) => {
+  //       setProducts(products);console.log(products)})
+  //     .catch(error => console.error(error));
+  // }, []);
+
+  const fetchInfo = async () => {
+    await fetch ("http://localhost:8000/furniture")
+    .then ((res) => res.json())
+    .then((product) => setAllProducts(product)
+  );
+  }
+
+  useEffect(() => {
+    fetchInfo();
+  },[])
+
   return (
     <>
       <Title>Tous Les Produits</Title>
       <List>
-        {products.map((product) => (
+        {allProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </List>
     </>
   );
 };
+
+
 
 export default ProductList;
