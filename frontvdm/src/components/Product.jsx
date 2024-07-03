@@ -57,9 +57,11 @@ const Button = styled.button`
 
 
 const Product = ({ product }) => {
+  const url = `${product.picture}`;
   return (
     <Container>
-      <Image src={product.image} alt={product.name}/>
+      
+      <Image src={product.picture} alt={product.name} />
       <Name>{product.name}</Name>
       <Description>{product.description}</Description>
       <Price>Prix: {product.price}€</Price>
@@ -67,5 +69,6 @@ const Product = ({ product }) => {
     </Container>
   );
 };
+
 
 export default Product;

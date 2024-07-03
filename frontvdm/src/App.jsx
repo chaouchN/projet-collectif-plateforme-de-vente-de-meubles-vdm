@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Copyrights from './components/Copyrights'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import AddProduct from "./pages/AddProduct"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path="/register" element={<Register/>} />
       <Route path="/product/:id" element={<ProductPage/>} />
+      <Route path="/AddProduct" element={<AddProduct/>} />
     </Routes>
     <Footer/>
     <Copyrights/>
