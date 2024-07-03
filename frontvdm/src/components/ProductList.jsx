@@ -38,7 +38,7 @@ const A = styled.a`
     text-decoration: underline;
     cursor: pointer;`
 
-const ProductList = /* async */() => {
+
 
 
 /* const test = await fetch('127.0.0.1:8000/furniture')
@@ -74,14 +74,13 @@ const ProductList = () => {
     <>
       <Title>Tous Les Produits</Title>
 
-      <Link to="/AddProduct" style={{ textDecoration: "none", color: "#111111" }}><A>Ajouter au panier</A></Link>
-
       <List>
       
-        {products.map((product) => (
+        
         {allProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
+        
       </List>
       
     </>

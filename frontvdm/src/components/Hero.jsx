@@ -69,7 +69,7 @@ const Hero = () => {
         <Container>
             <Title>Revendez vos meubles, sauvez la planète</Title>
             <Slogan>
-                Explorez notre plateforme dédiée à la revente de meubles entre particuliers où chaque pièce trouve une seconde vie.<br />
+                Explorez notre plateforme dédiée à la revente de meubles entre particuliers, où chaque pièce trouve une seconde vie.<br />
                 Réduisons ensemble notre empreinte écologique.
             </Slogan>
             <Link to="/catalog"><Button><span>Découvrez nos produits</span></Button></Link>
