@@ -18,7 +18,7 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 `;
 
 const Logo = styled.h1``;
@@ -91,6 +91,7 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: "none", color: "#111111" }}><Logo>VDM</Logo></Link>
           <Link to="/" style={{ textDecoration: "none", color: "#111111" }}><MenuItem>Accueil</MenuItem></Link>
           <Link to="/catalog" style={{ textDecoration: "none", color: "#111111" }}><MenuItem>Catalogue</MenuItem></Link>
+          <Link to="/AddProduct" style={{ textDecoration: "none", color: "#111111" }}><MenuItem>vends tes meubles</MenuItem></Link>
         </Left>
 
         <Center>

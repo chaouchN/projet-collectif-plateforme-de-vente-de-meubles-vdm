@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import products from './products';
 import Product from './Product';
+import { Link } from 'react-router-dom';
+
 
 const Title = styled.h1`
   font-size: 50px;
@@ -27,6 +29,12 @@ const List = styled.div`
   }
 `;
 
+const A = styled.a`
+    margin: 5px 0px;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;`
+
 const ProductList = /* async */() => {
 
 
@@ -37,11 +45,16 @@ console.log(test.json) */
   return (
     <>
       <Title>Tous Les Produits</Title>
+
+      <Link to="/AddProduct" style={{ textDecoration: "none", color: "#111111" }}><A>Ajouter au panier</A></Link>
+
       <List>
+      
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </List>
+      
     </>
   );
 };
