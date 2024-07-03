@@ -23,12 +23,14 @@ class FurnitureController extends AbstractController
     #[Route('/furniture/{id}',requirements: ['id'=> Requirement::DIGITS],  methods: ['GET'])]
         public function getOneFurniture(Furniture $furniture)  // requête à la base de données Voir FurnitureRepository
         {
-        return $this->json($furniture,200,[],[  //  Renvoie un seul memble en Json
+        return $this->json($furniture,200,[],[  //  Renvoie un seul meuble en Json
             'groups' => ['api_furniture_get','api_one_furniture']  // les champs avec ces tags Voir Furniture.php ET Categories.php
         ]);
 
 
     }
+
+
 }
 
 

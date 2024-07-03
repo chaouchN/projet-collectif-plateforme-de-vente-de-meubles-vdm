@@ -20,17 +20,17 @@ class Furniture
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column]
     private ?float $height = null;
 
     
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column]
     private ?float $width = null;
 
    
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column]
     private ?float $depth = null;
 
@@ -39,7 +39,7 @@ class Furniture
     private ?float $price = null;
 
     
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $color = null;
 
@@ -48,7 +48,7 @@ class Furniture
     private ?string $picture = null;
 
     
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\Column(length: 255)]
     private ?string $material = null;
 
@@ -65,7 +65,7 @@ class Furniture
     private ?\DateTimeImmutable $updatedAt = null;
 
     
-    #[Groups(['api_one_furniture'])]
+    #[Groups(['api_furniture_get'])]
     #[ORM\ManyToOne(inversedBy: 'furniture', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Categories $category = null;
