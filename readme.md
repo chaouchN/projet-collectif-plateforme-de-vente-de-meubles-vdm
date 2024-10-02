@@ -1,3 +1,26 @@
+# 🪑 VDM : Ventes de Meubles
+
+**VDM : Ventes de Meubles** est une plateforme de vente en ligne dédiée aux meubles de seconde main. Ce projet a été réalisé en 7 jours par une équipe de 6 personnes, avec une rotation des rôles au 4ème jour pour optimiser la collaboration entre les équipes.
+
+## 📅 Détails du projet
+
+- **Durée** : 7 jours
+- **Équipe** : 6 membres
+  - **Front-end** : 3 développeurs utilisant **React**
+  - **Back-end** : 3 développeurs utilisant **Symfony**
+- **Passation des rôles** : Changement d'équipe le 4ème jour
+
+## 👩‍💻 Technologies utilisées
+
+- **Front-end** : 
+  - React
+- **Back-end** : 
+  - Symfony
+- **Base de données** : 
+  - MySQL (ou toute autre base de données utilisée)
+
+## 📦 Installation
+
 Install party
 installer php8
 installer composer => https://getcomposer.org/download/
